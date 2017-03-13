@@ -3,6 +3,9 @@
 	padding: 0;
 	margin: 0;
 }
+body{
+	font-style: "黑体";
+}
 a
 {
 	text-decoration: none;
@@ -35,7 +38,7 @@ a
 .sidebar .photo p
 {
 	color: #f2f2f2;
-	font-size: "黑体";
+
 	font-size: 20px;
 	letter-spacing: 3px;
 	margin-top: 20px;
