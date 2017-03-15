@@ -12,9 +12,6 @@ $(function(){
 			padding:"40px",
 			opacity:"0.9",
 			fontSize:"20px"
-		},function(){
-
-		$(this).css('boxShadow', '0 0 10px #aaa');
 		}).
 		addClass('animated pulse');
 	});
@@ -27,9 +24,6 @@ $(function(){
 			padding:"10px",
 			opacity:"0.5",
 			fontSize:"16px"
-		},function(){
-		
-		$(this).css('boxShadow', 'none');
 		}).
 		removeClass('animated pulse');
 	});
@@ -45,7 +39,7 @@ $(function(){
 		
 		
 
-		$(".content").css('display', 'block').find('p').text( $(event.target).text());
+		$(".content").css('display', 'block').find('p.h').text( $(event.target).text());
 		$(".content").addClass('animated rotateInUpLeft');
 		});
 
@@ -55,24 +49,50 @@ $(function(){
 			padding:"10px",
 			opacity:"0.5",
 			fontSize:"16px"
-		},function(){
-			$(this).css('boxShadow', 'none');
-		}).
-		removeClass('animated shake');;
-		}).
+		});}).
 		trigger('mouseout');
 
 		$(this).unbind('mouseout');
 
 		$(".content").css('display','none',function(){
-			$(".content").css('display', 'block').find('p').text( $(event.target).text());
+			$(".content").css('display', 'block').find('p.h').text( $(event.target).text());
 		$(".content").addClass('animated rotateInUpLeft');
 		});
 		}
 	});
 
 
+	$(".nav ul li").click(function(event)
+	{
+	setTimeout(function()
+	{
+		$(".content .person .item1").animate({
+			left:"0px",
+		},800);
+	}, 1000);
 
+	
+		var i=0;
+
+		setTimeout(function(){
+		var timer=setInterval(function(){
+
+		$(".content .person .item2 li:eq("+i++ +")").animate({
+			left:"0px",
+		},500);	
+
+		},500);
+		},1000);
+
+
+
+
+		setTimeout(function(){
+			clearInterval(timer);
+		},5000);
+
+
+	});
 
 
 
