@@ -1,7 +1,7 @@
 $(function(){
 	
 	$(".content").css('display', 'none');
-
+	$(".content").css('top','100%');
 	$(".nav ul li").mouseover(function(){
 		$(".nav").stop().animate({
 			width:"320px",
@@ -12,8 +12,7 @@ $(function(){
 			padding:"40px",
 			opacity:"0.9",
 			fontSize:"20px"
-		}).
-		addClass('animated pulse');
+		});		
 	});
 
 
@@ -24,8 +23,7 @@ $(function(){
 			padding:"10px",
 			opacity:"0.5",
 			fontSize:"16px"
-		}).
-		removeClass('animated pulse');
+		});
 	});
 
 
@@ -40,7 +38,7 @@ $(function(){
 		
 
 		$(".content").css('display', 'block').find('p.h').text( $(event.target).text());
-		$(".content").addClass('animated rotateInUpLeft');
+			$(".content").animate({top:"0"}, 1000);
 		});
 
 		$(this).siblings().
@@ -54,10 +52,10 @@ $(function(){
 
 		$(this).unbind('mouseout');
 
-		$(".content").css('display','none',function(){
+	
 			$(".content").css('display', 'block').find('p.h').text( $(event.target).text());
-		$(".content").addClass('animated rotateInUpLeft');
-		});
+		$(".content").animate({top:"0"}, 1000);
+	
 		}
 	});
 
@@ -67,7 +65,8 @@ $(function(){
 	setTimeout(function()
 	{
 		$(".content .person .item1").animate({
-			left:"0px",
+			left:"400px",
+			
 		},800);
 	}, 1000);
 

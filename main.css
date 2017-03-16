@@ -80,10 +80,19 @@ a
 	position: absolute;
 	left: 320px;
 	background-color: #ffffff;
-	height: 1200px;
+	height: 100%;
 	z-index: 1;
 	right: 0;
 
+}
+.content .footer
+{
+	position: absolute;
+	height: 90px;
+	left: 0px;
+	right: 0px;
+	background-color: #f5f5f5;
+	bottom: 0px;
 }
 .content .head
 {
@@ -107,10 +116,11 @@ a
 .content .person
 {
 	position: absolute;
-	top: 200px;
-	left: 300px;
+	top: 90px;
+	bottom: 90px;
+	left: 0;
 	right: 0;
-	height: 600px;
+	background-color: #2FBE89;
 	font-style: "黑体";
 	color: #626262;
 
@@ -140,7 +150,7 @@ a
 	text-align: right;
 	position: absolute;
 	left: 2000px;
-	font-weight: bold;
+	top: 200px;
 
 }
 .content .person ul li
@@ -154,7 +164,8 @@ a
 {
 	text-align: left;
 	position: absolute;
-	left: 100px;
+	left: 500px;
+	top: 200px;
 }
 .content .person .item2 li
 
